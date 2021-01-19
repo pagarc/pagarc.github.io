@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Andrew Garcia</title>
+    <link rel="canonical" href="https://pagarcia.me/" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="https://pagarcia.me/">Andrew Garcia</a></h1>
+
+        <img class="logo" src="img/logo.png" alt="Logo" />
+
+        <p class="about">
+          Information Science senior at the University of Maryland, College
+          Park. Prior to this, I earned an Associate of Arts in Information
+          Systems from Montgomery College.
+        </p>
+
+        <p class="links">
+          <a href="https://github.com/pagarc">GitHub</a> |
+          <a href="https://linkedin.com/in/pagarc">LinkedIn</a>
+        </p>
+
+        <h2 class="contact">Contact</h2>
+        <form action="#" method="POST">
+          <ul>
+            <li><input type="text" id="name" name="name" placeholder="Name" required /></li>
+            <li><input type="email" id="email" name="email" placeholder="Email" required /></li>
+            <li><textarea class="textarea" name="message" placeholder="Message"></textarea></li>
+            <li><button type="submit">Submit</button></li>
+          </ul>
+        </form>
+      </header>
+      <section>
+<h2 id="Portfolio">Portfolio</h2>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/spotify-charts-story">Spotify Charts Data Story and Dashboard [Tableau&#47;Python]</a></p>
+
+<p><img src="img/charts_dash_thumb.png" alt="Spotify Charts Data Story and Dashboard" /></p>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/morning-10">LitterLog Website [HTML&#47;CSS&#47;JS]</a></p>
+
+<p><img src="img/litterlog.gif" alt="LitterLog Website" /></p>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/mlr-memo">Multiple Linear Regression Memo [R&#47;SAS]</a></p>
+
+<p><img src="img/mlr_assumpt_thumb.png" alt="Multiple Linear Regression Memo" /></p>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/data-wrangling">Data Wrangling [Python]</a></p>
+
+<p><img src="img/data_wrangling_thumb.png" alt="Data Wrangling" /></p>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/movie-ticket-mgr">Movie Ticket Manager [Java]</a></p>
+
+<p><img src="img/movie_thumb.png" alt="Movie Ticket Manager" /></p>
+
+<hr/>
+
+<p><a href="https://github.com/pagarc/crypto-ciphers">Caesar and Bellaso Ciphers [Java]</a></p>
+
+<p><img src="img/cipher_thumb.png" alt="Caesar and Bellaso Ciphers" /></p>
+
+<hr/>
+      </section>
+    </div>
+    <script src="scale.fix.js"></script>
+    <script>
+      const section = document.querySelector("section");
+      const container = section.querySelectorAll("p");
+      container.forEach(el => el.classList.add("container"));
+    </script>
+  </body>
+</html>
