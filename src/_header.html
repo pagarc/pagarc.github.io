@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=.85" />
     <title>Portfolio | Andrew Garcia</title>
     <link rel="canonical" href="https://pagarcia.me/" />
     <link rel="stylesheet" href="style.css" />
@@ -20,24 +20,31 @@
         <img class="logo" src="img/logo.png" alt="Logo" />
 
         <p class="about">
-          Information Science senior at the University of Maryland, College
-          Park. Prior to this, I earned an Associate of Arts in Information
-          Systems from Montgomery College.
+          Hi! I'm Andrew, a recent University of Maryland, College Park
+          graduate who is interested in the intersection of web development
+          and data analytics.
         </p>
 
         <p class="links">
           <a href="https://github.com/pagarc">GitHub</a> |
-          <a href="https://linkedin.com/in/pagarc">LinkedIn</a>
+          <a href="https://linkedin.com/in/pagarc">LinkedIn</a> |
+          <a href="mailto:pandrewgarcia@protonmail.com">Email</a>
         </p>
 
         <h2 class="contact">Contact</h2>
-        <form action="#" method="POST">
+        <form action="https://usebasin.com/f/f54246a66991" method="POST">
           <ul>
-            <li><input type="text" id="name" name="name" placeholder="Name" required /></li>
-            <li><input type="email" id="email" name="email" placeholder="Email" required /></li>
-            <li><textarea class="textarea" name="message" placeholder="Message"></textarea></li>
+            <li>Name</li>
+            <li><input type="text" id="name" name="name" label="name" required /></li>
+            <li>Email</li>
+            <li><input type="email" id="email" name="email" label="email" required /></li>
+            <li>Message</li>
+            <li><textarea class="textarea" name="message" label="message"></textarea></li>
             <li><button type="submit">Submit</button></li>
           </ul>
         </form>
+
+        <a class="toggle"></a>
+
       </header>
       <section>

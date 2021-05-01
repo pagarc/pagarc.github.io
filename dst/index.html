@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=.85" />
     <title>Portfolio | Andrew Garcia</title>
     <link rel="canonical" href="https://pagarcia.me/" />
     <link rel="stylesheet" href="style.css" />
@@ -20,73 +20,116 @@
         <img class="logo" src="img/logo.png" alt="Logo" />
 
         <p class="about">
-          Information Science senior at the University of Maryland, College
-          Park. Prior to this, I earned an Associate of Arts in Information
-          Systems from Montgomery College.
+          Hi! I'm Andrew, a recent University of Maryland, College Park
+          graduate who is interested in the intersection of web development
+          and data analytics.
         </p>
 
         <p class="links">
           <a href="https://github.com/pagarc">GitHub</a> |
-          <a href="https://linkedin.com/in/pagarc">LinkedIn</a>
+          <a href="https://linkedin.com/in/pagarc">LinkedIn</a> |
+          <a href="mailto:pandrewgarcia@protonmail.com">Email</a>
         </p>
 
         <h2 class="contact">Contact</h2>
-        <form action="#" method="POST">
+        <form action="https://usebasin.com/f/f54246a66991" method="POST">
           <ul>
-            <li><input type="text" id="name" name="name" placeholder="Name" required /></li>
-            <li><input type="email" id="email" name="email" placeholder="Email" required /></li>
-            <li><textarea class="textarea" name="message" placeholder="Message"></textarea></li>
+            <li>Name</li>
+            <li><input type="text" id="name" name="name" required /></li>
+            <li>Email</li>
+            <li><input type="email" id="email" name="email" required /></li>
+            <li>Message</li>
+            <li><textarea class="textarea" name="message"></textarea></li>
             <li><button type="submit">Submit</button></li>
           </ul>
         </form>
+
+        <a class="toggle"></a>
+
       </header>
       <section>
-<h2 id="Portfolio">Portfolio</h2>
+<h2>About</h2>
 
-<hr/>
+<hr />
 
-<p><a href="https://github.com/pagarc/spotify-charts-story">Spotify Charts Data Story and Dashboard [Tableau&#47;Python]</a></p>
+<p>I have always enjoyed building and tinkering, and I see web development and creating data visualizations as extensions of this. I have been able to channel my creativity into my studies, where I learned how to visualize data to present online.</p>
 
-<p><img src="img/charts_dash_thumb.png" alt="Spotify Charts Data Story and Dashboard" /></p>
+<p>While working as an undergraduate teaching assistant for my Dynamic Web Applications class, I was able to share my enthusiasm for building websites in HTML/CSS and Javascript with my fellow classmates. I secured this position from front-end development work on a website that interfaced with Prince George’s County Open Data Portal database, enabling county residents to view past litter pickups and record new ones.</p>
 
-<hr/>
+<p>Through my teaching experience, I became adept at breaking down technical concepts, such as Git, in a digestible way. My patience and attention to detail while working with students and the instructor led to positive feedback from both. Weekly meetings with the instructional team allowed me to work with a technical team. I look forward to using these experiences to further contribute to technical teams while enhancing my skills.</p>
 
-<p><a href="https://github.com/pagarc/morning-10">LitterLog Website [HTML&#47;CSS&#47;JS]</a></p>
+<h2>Projects</h2>
 
-<p><img src="img/litterlog.gif" alt="LitterLog Website" /></p>
+<hr />
 
-<hr/>
+<p><a href="https://github.com/pagarc/morning-10">LitterLog Website [HTML/CSS/JS]</a></p>
 
-<p><a href="https://github.com/pagarc/mlr-memo">Multiple Linear Regression Memo [R&#47;SAS]</a></p>
+<p><a href="https://github.com/pagarc/morning-10"><img src="img/litterlog.gif" alt="LitterLog Website" title="" /></a></p>
 
-<p><img src="img/mlr_assumpt_thumb.png" alt="Multiple Linear Regression Memo" /></p>
+<hr />
 
-<hr/>
+<p><a href="https://github.com/pagarc/spotify-charts-story">Spotify Charts Data Story and Dashboard [Tableau/Python]</a></p>
+
+<p><a href="https://github.com/pagarc/spotify-charts-story"><img src="img/charts_dash_thumb.png" alt="Spotify Charts Data Story and Dashboard" title="" /></a></p>
+
+<hr />
+
+<p><a href="https://github.com/pagarc/mlr-memo">Multiple Linear Regression Memo [R/SAS]</a></p>
+
+<p><a href="https://github.com/pagarc/mlr-memo"><img src="img/mlr_assumpt_thumb.png" alt="Multiple Linear Regression Memo" title="" /></a></p>
+
+<hr />
 
 <p><a href="https://github.com/pagarc/data-wrangling">Data Wrangling [Python]</a></p>
 
-<p><img src="img/data_wrangling_thumb.png" alt="Data Wrangling" /></p>
+<p><a href="https://github.com/pagarc/data-wrangling"><img src="img/data_wrangling_thumb.png" alt="Data Wrangling" title="" /></a></p>
 
-<hr/>
-
-<p><a href="https://github.com/pagarc/movie-ticket-mgr">Movie Ticket Manager [Java]</a></p>
-
-<p><img src="img/movie_thumb.png" alt="Movie Ticket Manager" /></p>
-
-<hr/>
-
-<p><a href="https://github.com/pagarc/crypto-ciphers">Caesar and Bellaso Ciphers [Java]</a></p>
-
-<p><img src="img/cipher_thumb.png" alt="Caesar and Bellaso Ciphers" /></p>
-
-<hr/>
+<hr />
       </section>
     </div>
-    <script src="scale.fix.js"></script>
     <script>
+      console.log('hello! o/')
+
       const section = document.querySelector("section");
       const container = section.querySelectorAll("p");
       container.forEach(el => el.classList.add("container"));
+
+      const toggle = document.querySelector(".toggle");
+
+      // https://blog.prototypr.io/create-your-own-dark-mode-using-js-css-variables-and-localstorage-8b461864644b
+      // Get the current theme from local storage
+      const currentTheme = localStorage.getItem("theme");
+
+      // If the current local storage item can be found
+      if (currentTheme === null) {
+        toggle.innerText = "🌚";
+      }
+
+      if (currentTheme) {
+        // Set the body data-theme attribute to match the local storage item
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        toggle.innerText = "🌚";
+
+        // If the current theme is dark, check the theme toggle
+        if (currentTheme === "dark") {
+          toggle.innerText = "🌞";
+        }
+      }
+      
+      // Function that will switch the theme based on the if the theme toggle is checked or not
+      function switchTheme() {
+        if (document.documentElement.getAttribute("data-theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          toggle.innerText = "🌚";
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          toggle.innerText = "🌞";
+        }
+      }
+
+      toggle.addEventListener("click", switchTheme);
     </script>
   </body>
 </html>

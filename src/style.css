@@ -1,4 +1,21 @@
+:root {
+  --bg: #efefef;
+  --font: #222;
+  --link: #0067e6;
+  --header-bg: #fec150;
+}
+
+[data-theme="dark"] {
+  --bg: #111;
+  --font: #efefef;
+  --link: #fec150;
+  --header-bg: #222;
+}
+
 body {
+  background: var(--bg);
+  color: var(--font);
+
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
@@ -13,8 +30,9 @@ h1, h2 {
 }
 
 a {
+  color: var(--link);
+
   text-decoration: none;
-  color: #267CB9;
 }
 
 a:hover, a:focus {
@@ -30,10 +48,15 @@ form {
   width: 100%;
 }
 
-ul {
+form ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+form li {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 input, textarea {
@@ -45,8 +68,8 @@ input, textarea {
   padding: 5px;
 }
 
-li {
-  margin-top: 15px;
+textarea {
+  resize: vertical;
 }
 
 .wrapper {
@@ -68,14 +91,24 @@ li {
 
 .about {
   margin: 0;
+  text-align: center;
+}
+
+.toggle {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+  padding: 0 0 15px 0;
+  margin: 0;
 }
 
 header {
+  background: var(--header-bg);
+
   flex: 1;
   padding: 0px 30px;
   display: flex;
   flex-flow: column wrap;
-  background: #eee;
   position: sticky;
   top: 0;
   align-items: center;
@@ -86,4 +119,20 @@ section {
   flex: 2;
   padding: 0px 30px;
   padding-bottom: 0px;
+}
+
+@media screen and (max-width: 836px) {
+  header {
+    min-height: 100%;
+    position: relative;
+  }
+
+  section h2, p, li {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  hr {
+    width: 80%;
+  }
 }
