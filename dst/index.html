@@ -35,11 +35,11 @@
         <form action="https://usebasin.com/f/f54246a66991" method="POST">
           <ul>
             <li>Name</li>
-            <li><input type="text" id="name" name="name" required /></li>
+            <li><input type="text" id="name" name="name" label="name" required /></li>
             <li>Email</li>
-            <li><input type="email" id="email" name="email" required /></li>
+            <li><input type="email" id="email" name="email" label="email" required /></li>
             <li>Message</li>
-            <li><textarea class="textarea" name="message"></textarea></li>
+            <li><textarea class="textarea" name="message" label="message"></textarea></li>
             <li><button type="submit">Submit</button></li>
           </ul>
         </form>
@@ -88,10 +88,11 @@
       </section>
     </div>
     <script>
-      console.log('hello! o/')
+      console.log("%cHello! o/","color:#ff7a90; font-family:monospace; font-weight:bold; font-size: 40px");
+      console.log("This website was designed and built by Andrew Garcia.");
 
-      const section = document.querySelector("section");
-      const container = section.querySelectorAll("p");
+      // const section = document.querySelector("section");
+      const container = document.querySelectorAll("section > p");
       container.forEach(el => el.classList.add("container"));
 
       const toggle = document.querySelector(".toggle");

@@ -1,10 +1,11 @@
       </section>
     </div>
     <script>
-      console.log('hello! o/')
+      console.log("%cHello! o/","color:#ff7a90; font-family:monospace; font-weight:bold; font-size: 40px");
+      console.log("This website was designed and built by Andrew Garcia.");
 
-      const section = document.querySelector("section");
-      const container = section.querySelectorAll("p");
+      // const section = document.querySelector("section");
+      const container = document.querySelectorAll("section > p");
       container.forEach(el => el.classList.add("container"));
 
       const toggle = document.querySelector(".toggle");

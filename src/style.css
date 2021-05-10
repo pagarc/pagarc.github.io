@@ -1,15 +1,15 @@
 :root {
-  --bg: #efefef;
-  --font: #222;
-  --link: #0067e6;
-  --header-bg: #fec150;
+  --bg: #fffaf8;
+  --font: #1E2633;
+  --header-font: #fffaf8;
+  --link: #f04040;
+  --link-hover: #ff7a90;
+  --header-bg: #2d394d;
 }
 
 [data-theme="dark"] {
-  --bg: #111;
-  --font: #efefef;
-  --link: #fec150;
-  --header-bg: #222;
+  --bg: #1E2633;
+  --font: #fffaf8;
 }
 
 body {
@@ -36,8 +36,9 @@ a {
 }
 
 a:hover, a:focus {
+  color: var(--link-hover);
+
   font-weight: bold;
-  color: #069;
 }
 
 .contact {
@@ -60,10 +61,12 @@ form li {
 }
 
 input, textarea {
+  background: var(--header-font);
+
   box-sizing: border-box;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  border: none;
   width: 100%;
   padding: 5px;
 }
@@ -71,6 +74,24 @@ input, textarea {
 textarea {
   resize: vertical;
 }
+
+button {
+  color: var(--header-font);
+  background-color: var(--link);
+  
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: var(--link-hover);
+}
+
 
 .wrapper {
   display: flex;
@@ -103,6 +124,7 @@ textarea {
 }
 
 header {
+  color: var(--header-font);
   background: var(--header-bg);
 
   flex: 1;
@@ -122,17 +144,21 @@ section {
 }
 
 @media screen and (max-width: 836px) {
+  body, input, textarea, button {
+    font-size: 1.2rem;
+  }
+
   header {
     min-height: 100%;
     position: relative;
   }
 
   section h2, p, li {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   hr {
-    width: 80%;
+    width: 90%;
   }
 }
