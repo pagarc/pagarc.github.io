@@ -101,7 +101,7 @@ button:hover {
   justify-content: space-between;
 }
 
-.container {
+.projects p {
   display: flex;
   justify-content: center;
 }
