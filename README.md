@@ -4,4 +4,6 @@ Static portfolio site built with vanilla HTML/CSS/JS and [ssg](https://www.roman
 
 To build locally:
 
-```ssg6 src . 'Portfolio | Andrew Garcia' 'https://www'```
+```sh
+ssg6 src . 'Portfolio | Andrew Garcia' 'https://www'
+```
